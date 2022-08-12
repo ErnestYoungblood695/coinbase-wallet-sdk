@@ -14,14 +14,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: ${{ github.actor }} permission check to update release version
-        uses: "lannonbr/repo-permission-check-action@2.0.2"
+        uses: "lannonbr/r
+        epo-permission-check-action@2.0.2"
         with:
           permission: "write"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
+        
   version:
     name: Updates package version
+
     runs-on: ubuntu-latest
     defaults:
       run:
